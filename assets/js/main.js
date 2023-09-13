@@ -33,7 +33,7 @@ createApp({
               },
 
               {
-                text: "fare la spesa",
+                text: "Mandare un mazzo di fiori ad Artur ",
                 done:true
               }
             ]
