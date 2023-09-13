@@ -17,24 +17,34 @@
 
 <body>
 
+    <h1 class="text-center">TO DO LIST</h1>
+
+
     <div id="app">
 
 
-        <div class="container">
-            <input v-model="task" type="text">
-            <button @click="addTasks">Aggiungi</button>
+        <div class="container text-center mt-5 ">
+            <div class="input-group mb-3 w_40 m-auto">
+                <input type="text" class="form-control border border-success" placeholder="Inserisci una task!"
+                    aria-label="Recipient's username" aria-describedby="button-addon2" v-model="task">
+                <button class="btn btn-outline-success" type="button" id="button-addon2"
+                    @click="addTasks">Button</button>
+            </div>
         </div>
 
-        <div class="container">
 
-            <ol v-if="tasks.length > 0">
-                <li  v-for="(task ,index) in tasks" :class="task.done ? 'text-decoration-line-through' : '' ">{{task.text}}
-                    <i class="fa-solid fa-circle-minus text-danger" @click="removeTask(index)"></i>
-                    <i class="fa-solid fa-circle-check" style="color: #17d714;" @click="taskDone(index)"></i>
-                </li>
-            </ol>
-
+        <div class="card w_40 m-auto mt-5 ">
+            <div class="card-body">
+                <ol v-if="tasks.length > 0">
+                    <li v-for="(task ,index) in tasks" :class="task.done ? 'text-decoration-line-through' : '' ">
+                        {{task.text}}
+                        <i class="fa-solid fa-circle-minus text-danger ms-2" @click="removeTask(index)"></i>
+                        <i class="fa-solid fa-circle-check ms-2" style="color: #17d714;" @click="taskDone(index)"></i>
+                    </li>
+                </ol>
+            </div>
         </div>
+    </div>
 
 
 
