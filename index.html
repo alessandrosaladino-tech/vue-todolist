@@ -28,9 +28,9 @@
         <div class="container">
 
             <ol v-if="tasks.length > 0">
-                <li v-for="(task ,index) in tasks">{{task.text}}
+                <li  v-for="(task ,index) in tasks" :class="task.done ? 'text-decoration-line-through' : '' ">{{task.text}}
                     <i class="fa-solid fa-circle-minus text-danger" @click="removeTask(index)"></i>
-                    <i class="fa-solid fa-circle-check" style="color: #17d714;"></i>
+                    <i class="fa-solid fa-circle-check" style="color: #17d714;" @click="taskDone(index)"></i>
                 </li>
             </ol>
 

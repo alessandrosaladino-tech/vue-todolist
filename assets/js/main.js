@@ -27,8 +27,17 @@ createApp({
 
 
             tasks: [
-              
+              {
+                text: "fare la spesa",
+                done:false
+              },
+
+              {
+                text: "fare la spesa",
+                done:true
+              }
             ]
+            
 
         }
     },
@@ -59,7 +68,7 @@ createApp({
         },
 
         taskDone(index){
-           this.tasks.classList.add()
+           this.tasks[index].done = true
         }
     }
 
