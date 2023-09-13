@@ -23,11 +23,44 @@ createApp({
     data() {
         return {
 
+            task: "",
+
+
+            tasks: [
+              
+            ]
+
         }
     },
 
     methods: {
+        addTasks() {
 
+            if (this.taskInput != "") {
+
+                const newTask = {
+                    text: this.task,
+                    done: false
+                };
+
+                this.tasks.push(newTask);
+               
+                this.task = "";
+
+            } else {
+               
+            }
+
+        },
+
+        //MILESTONE 2 
+        removeTask(index) {
+            this.tasks.splice(index, 1 );
+        },
+
+        taskDone(index){
+           this.tasks.classList.add()
+        }
     }
 
 }).mount('#app')
