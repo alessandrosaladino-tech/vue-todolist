@@ -26,7 +26,7 @@
         <div class="container text-center mt-5 ">
             <div class="input-group mb-3 w_40 m-auto">
                 <input type="text" class="form-control border border-success" placeholder="Inserisci una task!"
-                    aria-label="Recipient's username" aria-describedby="button-addon2" v-model="task">
+                    aria-label="Recipient's username" aria-describedby="button-addon2" v-model="task" @keyup.enter="addTasks">
                 <button class="btn btn-outline-success" type="button" id="button-addon2"
                     @click="addTasks">Aggiungi Task</button>
             </div>
