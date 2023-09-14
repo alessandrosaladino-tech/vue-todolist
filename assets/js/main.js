@@ -68,7 +68,7 @@ createApp({
         },
 
         taskDone(index){
-           this.tasks[index].done = true
+           this.tasks[index].done  = true
         }
     }
 
